@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "PiicoDev OLED SSD1306")(type KiCad)(uri "${KIPRJMOD}/PiicoDev OLED SSD1306.pretty")(options "")(descr ""))
+)
