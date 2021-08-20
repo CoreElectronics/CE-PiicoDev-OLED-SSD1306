@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PiicoDev OLED SSD1306"
-Date "2021-08-19"
+Date "2021-08-20"
 Rev "10"
 Comp "Core Electronics"
 Comment1 "Designed at Core Electronics by Peter Johnston"
