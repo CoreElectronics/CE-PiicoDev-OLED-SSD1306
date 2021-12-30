@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PiicoDev OLED SSD1306"
-Date "2021-08-20"
-Rev "10"
+Date "2021-12-30"
+Rev "11"
 Comp "Core Electronics"
 Comment1 "Designed at Core Electronics by Peter Johnston"
 Comment2 "PiicoDev and the PiicoDev logo are trademarks of Core Electronics Pty Ltd"
@@ -14,12 +14,12 @@ Comment3 "License: CCASAv4.0 http://creativecommons.org/licenses/by-sa/4.0"
 Comment4 ""
 $EndDescr
 $Comp
-L CoreElectronics_Artwork:LOGO_PiicoDev G1
+L CoreElectronics_Artwork:LOGO_PiicoDev #G1
 U 1 1 609A2A66
 P 8000 6300
-F 0 "G1" H 8000 6076 60  0001 C CNN
+F 0 "#G1" H 8000 6076 60  0001 C CNN
 F 1 "LOGO_PiicoDev" H 8000 6590 60  0001 C CNN
-F 2 "CoreElectronics_Artwork:piicodev_logo_14.2x3.4mm" H 8000 6300 50  0001 C CNN
+F 2 "" H 8000 6300 50  0001 C CNN
 F 3 "" H 8000 6300 50  0001 C CNN
 	1    8000 6300
 	1    0    0    -1  
@@ -347,7 +347,7 @@ AR Path="/609C5735/609F9B2E" Ref="J?"  Part="1"
 AR Path="/609F9B2E" Ref="J3"  Part="1" 
 F 0 "J3" H 2750 1850 50  0000 C CNN
 F 1 "Conn_PiicoDev_header_01x04_Male" H 2771 1807 50  0001 C CNN
-F 2 "CoreElectronics_Components:PiicoDev_header_4pin" H 2750 1500 50  0001 C CNN
+F 2 "CoreElectronics_Components:PiicoDev_header_4pin_no_labels" H 2750 1500 50  0001 C CNN
 F 3 "~" H 2750 1500 50  0001 C CNN
 	1    2750 1500
 	1    0    0    -1  
@@ -367,7 +367,7 @@ P 3250 4100
 AR Path="/609C5735/60A08162" Ref="R?"  Part="1" 
 AR Path="/60A08162" Ref="R3"  Part="1" 
 F 0 "R3" H 3320 4146 50  0000 L CNN
-F 1 "4k7" H 3320 4055 50  0000 L CNN
+F 1 "10k" H 3320 4055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3180 4100 50  0001 C CNN
 F 3 "~" H 3250 4100 50  0001 C CNN
 	1    3250 4100
@@ -397,7 +397,7 @@ P 2650 4100
 AR Path="/609C5735/60A08170" Ref="R?"  Part="1" 
 AR Path="/60A08170" Ref="R2"  Part="1" 
 F 0 "R2" H 2720 4146 50  0000 L CNN
-F 1 "4k7" H 2720 4055 50  0000 L CNN
+F 1 "10k" H 2720 4055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 2580 4100 50  0001 C CNN
 F 3 "~" H 2650 4100 50  0001 C CNN
 	1    2650 4100
@@ -489,7 +489,7 @@ L Device:R R1
 U 1 1 60A1F61C
 P 1450 3950
 F 0 "R1" H 1520 3996 50  0000 L CNN
-F 1 "4k7" H 1520 3905 50  0000 L CNN
+F 1 "10k" H 1520 3905 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 1380 3950 50  0001 C CNN
 F 3 "~" H 1450 3950 50  0001 C CNN
 	1    1450 3950
@@ -743,21 +743,6 @@ F 3 "" H 6300 3600 50  0001 C CNN
 $EndComp
 Text Label 7700 3200 0    50   ~ 0
 SA0
-Text Label 3150 2000 0    50   ~ 0
-SA0
-$Comp
-L Connector:Conn_01x01_Male J4
-U 1 1 60E7BAB8
-P 2750 2000
-F 0 "J4" H 2750 2150 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 2858 2090 50  0001 C CNN
-F 2 "CoreElectronics_Components:PiicoDev_header_1pin_ADR" H 2750 2000 50  0001 C CNN
-F 3 "~" H 2750 2000 50  0001 C CNN
-	1    2750 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2950 2000 3150 2000
 Connection ~ 8400 5150
 $Comp
 L power:GND #PWR02
@@ -807,7 +792,7 @@ L Device:R R5
 U 1 1 60E708B5
 P 6300 2850
 F 0 "R5" H 6370 2896 50  0000 L CNN
-F 1 "4k7" H 6370 2805 50  0000 L CNN
+F 1 "10k" H 6370 2805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6230 2850 50  0001 C CNN
 F 3 "~" H 6300 2850 50  0001 C CNN
 	1    6300 2850
@@ -856,22 +841,11 @@ F 3 "~" H 6400 7650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:SolderJumper_2_Open JP3
-U 1 1 60E6C696
-P 6750 2900
-F 0 "JP3" V 6704 2968 50  0000 L CNN
-F 1 "SolderJumper_2_Open" V 6795 2968 50  0000 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6750 2900 50  0001 C CNN
-F 3 "~" H 6750 2900 50  0001 C CNN
-	1    6750 2900
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 60E73C8C
 P 6750 3400
 F 0 "R6" H 6820 3446 50  0000 L CNN
-F 1 "4k7" H 6820 3355 50  0000 L CNN
+F 1 "10k" H 6820 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6680 3400 50  0001 C CNN
 F 3 "~" H 6750 3400 50  0001 C CNN
 	1    6750 3400
@@ -881,12 +855,8 @@ Wire Wire Line
 	6300 2600 6300 2700
 Connection ~ 7500 1850
 Wire Wire Line
-	6750 3200 6750 3050
-Wire Wire Line
 	6750 3200 6750 3250
 Connection ~ 6750 3200
-Wire Wire Line
-	6750 2750 6750 1850
 Wire Wire Line
 	6750 3550 6750 5150
 Wire Wire Line
@@ -957,4 +927,19 @@ Wire Wire Line
 Connection ~ 5400 5350
 Wire Wire Line
 	5400 5350 5400 5400
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 61CD3BB7
+P 6750 2450
+F 0 "SW1" V 6704 2580 50  0000 L CNN
+F 1 "SW_DIP_x01" V 6795 2580 50  0000 L CNN
+F 2 "CoreElectronics_Components:SW_DIP_x01_Slide_CHS-01A1" H 6750 2450 50  0001 C CNN
+F 3 "~" H 6750 2450 50  0001 C CNN
+	1    6750 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 2750 6750 3200
+Wire Wire Line
+	6750 2150 6750 1850
 $EndSCHEMATC
